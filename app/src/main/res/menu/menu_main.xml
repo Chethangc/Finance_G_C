@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.financegc.MainActivity">
     <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="@string/action_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item
         android:id="@+id/action_savings"
         android:orderInCategory="100"
         android:title="@string/action_savings"
@@ -25,5 +31,11 @@
         android:orderInCategory="100"
         android:title="@string/action_spendings"
         android:icon="@drawable/ic_baseline_money_off_24"
+        />
+    <item
+        android:id="@+id/action_investments"
+        android:orderInCategory="100"
+        android:title="@string/action_investments"
+        android:icon="@drawable/ic_baseline_show_chart_24"
         />
 </menu>

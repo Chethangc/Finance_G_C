@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    final MenuItem[] previousItem = {null};
 
     private ActivityMainBinding binding;
 
@@ -56,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         toggle.syncState();
         toggle.setDrawerSlideAnimationEnabled(true);
-        final MenuItem[] previousItem = {null};
 
+        loadFragment(new Home());
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -66,25 +67,24 @@ public class MainActivity extends AppCompatActivity {
                     previousItem[0].setChecked(false);
                 }
                 if(id == R.id.action_savings){
-                    item.setChecked(true);
-                    loadFragment(new Savings());
-                    previousItem[0] =item;
+                    actionOnItemSelected(item,new Savings());
                 }
                 else if(id==R.id.action_spendings){
-                    item.setChecked(true);
-                    loadFragment(new Spendings());
-                    previousItem[0] =item;
+                    actionOnItemSelected(item,new Spendings());
                 }
                 else if(id==R.id.action_earnings){
-                    item.setChecked(true);
-                    loadFragment(new Earnings());
-                    previousItem[0] =item;
+                    actionOnItemSelected(item,new Earnings());
                 }
                 else if(id==R.id.action_loans){
-                    item.setChecked(true);
-                    loadFragment(new Loans());
-                    previousItem[0] =item;
+                    actionOnItemSelected(item,new Loans());
                 }
+                else if(id==R.id.action_investments){
+                    actionOnItemSelected(item,new Investments());
+                }
+                else if(id==R.id.action_home){
+                    actionOnItemSelected(item,new Home());
+                }
+
 
                 drawerLayout.closeDrawer(GravityCompat.START);
 
@@ -103,7 +103,17 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
         }
         else {
-            super.onBackPressed();
+            FragmentManager manager = getSupportFragmentManager();
+            int count = manager.getBackStackEntryCount();
+            if(count==0){
+                super.onBackPressed();
+            }
+            else{
+
+                FragmentTransaction transaction = manager.beginTransaction();
+                manager.popBackStackImmediate();
+                transaction.commit();
+            }
 
         }
     }
@@ -121,5 +131,25 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
 
+    }
+
+    public int getFragmentCount(){
+        FragmentManager manager = getSupportFragmentManager();
+        int count = manager.getBackStackEntryCount();
+        return count;
+    }
+
+    public void actionOnItemSelected(MenuItem item,Fragment fragment){
+        int count;
+        count = getFragmentCount();
+        if(count!= 0){
+            FragmentManager manager = getSupportFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }
+        item.setChecked(true);
+        loadFragment(fragment);
+        previousItem[0] =item;
     }
 }
