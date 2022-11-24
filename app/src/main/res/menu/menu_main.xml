@@ -6,20 +6,20 @@
         android:id="@+id/action_savings"
         android:orderInCategory="100"
         android:title="@string/action_savings"
-        app:showAsAction="never" />
+        />
     <item
         android:id="@+id/action_loans"
         android:orderInCategory="100"
         android:title="@string/action_loans"
-        app:showAsAction="never" />
+        />
     <item
         android:id="@+id/action_earnings"
         android:orderInCategory="100"
         android:title="@string/action_earnings"
-        app:showAsAction="never" />
+         />
     <item
         android:id="@+id/action_spendings"
         android:orderInCategory="100"
         android:title="@string/action_spendings"
-        app:showAsAction="never" />
+        />
 </menu>
