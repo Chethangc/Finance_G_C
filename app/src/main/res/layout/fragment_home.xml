@@ -10,49 +10,196 @@
     android:layout_gravity="center"
     android:background="#FFFFFF"
     android:foregroundGravity="center"
-    android:padding="50dp"
+    android:padding="45dp"
     app:layout_anchorGravity="center"
     tools:context=".Home">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="80dp">
 
-        <ImageButton
-            android:id="@+id/imageButton6"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_monetization_on_24" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/earnings_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_monetization_on_24" />
 
-        <ImageButton
-            android:id="@+id/imageButton5"
+                    <ImageButton
+                        android:id="@+id/savings_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_savings_24" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Earnings"
+                        android:textColor="#3949AB"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Savings"
+                        android:textColor="#3949AB"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_savings_24" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/spendings_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_money_off_24" />
+                    <ImageButton
+                        android:id="@+id/loans_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_account_balance_24" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton8"
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Spendings"
+                            android:textColor="#3949AB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Loans"
+                            android:textColor="#3949AB"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_money_off_24" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/investments_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_show_chart_24" />
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_account_balance_24" />
+                    <ImageButton
+                        android:id="@+id/home_button"
+                        android:layout_width="60dp"
+                        android:layout_height="140dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/ic_baseline_home_24" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_baseline_show_chart_24" />
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Invesments"
+                            android:textColor="#3949AB"
+                            android:textStyle="bold" />
 
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Home"
+                            android:textColor="#3949AB"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
 </FrameLayout>

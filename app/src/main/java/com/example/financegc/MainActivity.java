@@ -1,5 +1,6 @@
 package com.example.financegc;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
@@ -26,13 +27,16 @@ import com.example.financegc.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    final MenuItem[] previousItem = {null};
+    static final MenuItem[] previousItem = {null};
 
     private ActivityMainBinding binding;
 
@@ -92,10 +96,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+
         });
 
-
     }
+
 
     @Override
     public void onBackPressed() {
