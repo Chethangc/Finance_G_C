@@ -19,4 +19,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_investments">Investments</string>
     <string name="action_home">Home</string>
+    <string name="title_activity_login">Login</string>
+    <string name="aws_database_ip">54.238.205.129</string>
 </resources>
